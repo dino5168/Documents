@@ -24,18 +24,6 @@ await loadImage(imgPath)
     console.error("Failed to load image 0:", err);
   });
 
-function checkState(flag) {
-  return new Promise((resolve, reject) => {
-    if (flag) {
-      resolve();
-    } else {
-      reject();
-    }
-  });
-}
-
-checkState(true).then(console.log("true")).catch(console.log("false"));
-
 /*
 Promise.race([
   new Promise((resolve) => setTimeout(() => resolve("任務 1 完成"), 3000)),
